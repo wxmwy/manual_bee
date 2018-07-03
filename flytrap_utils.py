@@ -33,6 +33,7 @@ def load():
     IMAGES['stop'] = pygame.image.load('assets/flytrap/stop.png').convert_alpha()
     IMAGES['change'] = pygame.image.load('assets/flytrap/change.png').convert_alpha()
     IMAGES['back'] = pygame.image.load('assets/flytrap/back.png').convert_alpha()
+    IMAGES['sco'] = pygame.image.load('assets/ai.png').convert_alpha()
 
     # numbers sprites for score display
     IMAGES['numbers'] = (

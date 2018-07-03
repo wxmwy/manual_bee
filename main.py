@@ -14,6 +14,10 @@ while True:
     game_state.__init__()
     game_state.framestep(which)
     if start:
+        f = open('score.txt', 'w')
+        f.write('0' + '\n')
+        f.write('0' + '\n')
+        f.close()
         if which[0] == 1:
             pygame.mixer.music.load('sounds/m1.mp3')
             pygame.mixer.music.play()

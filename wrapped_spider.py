@@ -186,6 +186,13 @@ class GameState:
         SCREEN.blit(IMAGES['start'], (SCREENWIDTH-40-IMAGES['back'].get_width()-40-IMAGES['stop'].get_width()-40-IMAGES['start'].get_width(), SCREENHEIGHT-40-IMAGES['start'].get_height()))
         if terminal:
             showRst(self.score)
+            f = open('score.txt', 'r')
+            t = int(f.readline())
+            f.close()
+            f = open('score.txt', 'w')
+            f.write(str(t+1) + '\n')
+            f.write(str(self.score) + '\n')
+            f.close()
         pygame.display.update()
         image_data = None
         FPSCLOCK.tick(FPS)
